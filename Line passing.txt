@@ -1,0 +1,58 @@
+####################################################
+               EMISOR - RECEPTOR
+####################################################
+
+PASARELA 1
+----------
+DIN JUMPER: 	IO1
+RELAY JUMPER: 	IO0
+
+D1: 3 - DI
+D0: 4 - DO LOW
+IU: 0 - DISABLE
+IR: 100
+IA: FFFF
+
+
+PASARELA 2
+----------
+DIN JUMPER: 	IO0
+RELAY JUMPER: 	IO1
+
+D1: 4 - DO LOW
+D0: 3 - DI
+IU: 0 - DISABLE
+IR: 100
+IA: FFFF
+
+
+####################################################
+          EMISOR - VARIOS RECEPTORES
+####################################################
+
+EMISOR
+----------
+DIN JUMPER: 	IO1
+RELAY JUMPER: 	IO0
+
+DL: FFFF
+MY: FFFF
+D1: 3 - DI
+D0: 4 - DO LOW
+IU: 0 - DISABLE
+IR: 100
+IA: FFFFFFFFFFFFFFFF
+
+
+RECEPTORES
+----------
+DIN JUMPER: 	IO0
+RELAY JUMPER: 	IO1
+
+DL: FFFF
+MY: FFFF
+D1: 4 - DO LOW
+D0: 3 - DI
+IU: 0 - DISABLE
+IR: 100
+IA: SH+SL (EMISOR)
